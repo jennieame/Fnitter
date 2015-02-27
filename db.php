@@ -1,7 +1,7 @@
 <?php
 
 	define('DBUSER', 'root');
-	define('DBPASS', 'root');
+	define('DBPASS', 'password');
 	define('DBSERVER', 'localhost');
 	define('DBSCHEMA', 'jeer');
 
