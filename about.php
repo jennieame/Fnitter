@@ -8,6 +8,7 @@ require_once('functions.php');
 <html lang="se-sv">
 <head>
 	<meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' />
     <link rel="stylesheet" type="text/css" href="style.css">
 	<title>Fnitter</title>
 </head>
