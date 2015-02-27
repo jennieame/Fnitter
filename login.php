@@ -10,7 +10,7 @@ $password = mysqli_real_escape_string($db, $_POST['pwd']);
 
 $cryptPassword = md5($password);
 
-$inloggad = mysqli_query($db, "SELECT * FROM login WHERE `user` = '$name' AND `password` = '$cryptPassword'");
+$inloggad = mysqli_query($db, "SELECT * FROM 'login' WHERE `user` = '$name' AND `password` = '$cryptPassword'");
 $userInlog = mysqli_fetch_assoc($inloggad);
 
 if($userInlog){
