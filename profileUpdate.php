@@ -48,7 +48,7 @@ function changePassword(){
 
 		if($correctArray){
 		    	$cryptNewPassword = md5($newPwd);
-				$changePwd = mysqli_query($db, "UPDATE `fnitter`.`login` SET `password` = '$cryptNewPassword' WHERE `login`.`user` = '$profile'");
+				$changePwd = mysqli_query($db, "UPDATE `jeer`.`login` SET `password` = '$cryptNewPassword' WHERE `login`.`user` = '$profile'");
 		    	print "<p>Ditt lösenord är nu ändrat!</p>";
 		    }
 		else {

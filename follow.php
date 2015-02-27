@@ -16,7 +16,7 @@ function followUser($following, $user){
 		else		
 		{
 			print "Du har börjat följa <a href='searchProfile.php?profile=$following' >$following</a>";
-			$startFollow = mysqli_query($db,"INSERT INTO  `fnitter`.`following` (`user` ,`following`) VALUES ('$user',  '$following')");
+			$startFollow = mysqli_query($db,"INSERT INTO  `jeer`.`following` (`user` ,`following`) VALUES ('$user',  '$following')");
 			$news        = mysqli_query($db,"INSERT INTO `news`(`action`, `sendFrom`, `sendTo`) VALUES ('började följa dig', '$user', '$following')");
 		}
 	}
@@ -27,7 +27,7 @@ function followUser($following, $user){
 function unFollow($following, $user){
 
 	$db   = connectToDb();
-	$removeFollowing = mysqli_query($db, "DELETE FROM `fnitter`.`following` WHERE `following`.`user` = '$user' AND `following`.`following` = '$following'");
+	$removeFollowing = mysqli_query($db, "DELETE FROM `jeer`.`following` WHERE `following`.`user` = '$user' AND `following`.`following` = '$following'");
 	
 	print "Du har nu sluta följa $following!";
 

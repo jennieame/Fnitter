@@ -3,7 +3,7 @@
 	define('DBUSER', 'root');
 	define('DBPASS', '');
 	define('DBSERVER', 'localhost');
-	define('DBSCHEMA', 'fnitter');
+	define('DBSCHEMA', 'jeer');
 
 function  connectToDb(){
 	$connect = mysqli_connect(DBSERVER, DBUSER,  DBPASS, DBSCHEMA);

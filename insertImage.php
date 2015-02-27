@@ -26,7 +26,7 @@ if (isset($_FILES['upload']))
 			}
 
 			else{
-				$changeAvatar = mysqli_query($db, "UPDATE `fnitter`.`login` SET `avatar` = '$tmp' WHERE `login`.`user` = '$profile'");
+				$changeAvatar = mysqli_query($db, "UPDATE `jeer`.`login` SET `avatar` = '$tmp' WHERE `login`.`user` = '$profile'");
 				move_uploaded_file($tmp, $name);
 
 				$text = "<p>Filen '$name' uppladdad!</p>";
@@ -41,6 +41,7 @@ if (isset($_FILES['upload']))
 
 else{
 	$text = "<p>Du valde ingen bild</p>";
+	
 }
 
 return $text;

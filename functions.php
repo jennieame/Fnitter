@@ -211,7 +211,7 @@ function removePost($id){
                 print $text;
 
                 //Ta bort inlägget
-                $removePost = mysqli_query($db, "DELETE FROM `fnitter`.`posts` WHERE `posts`.`id` = '$id'");
+                $removePost = mysqli_query($db, "DELETE FROM `jeer`.`posts` WHERE `posts`.`id` = '$id'");
             }
 
             // ifall inte inlägget finns, eller inte är behörig att ta bort inlägget
@@ -252,7 +252,7 @@ function updatePost($post, $id){
     $db = connectToDb();
     
     $updatedPost = mysqli_real_escape_string($db, $post);
-    $update      = mysqli_query($db, "UPDATE `fnitter`.`posts` SET `post` = '$updatedPost' WHERE `posts`.`id` = $id");
+    $update      = mysqli_query($db, "UPDATE `jeer`.`posts` SET `post` = '$updatedPost' WHERE `posts`.`id` = $id");
 
     print "Nu är inlägget uppdaterat";
     mysqli_close($db);

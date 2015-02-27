@@ -35,7 +35,7 @@ if($newName != NULL && $newPassword != NULL && $mail != NULL){
                 array('status' => 'green', 'text' => 'Din användare är nu skapad och du kan logga in.'),
             );
 
-            $followAtStart = mysqli_query($db,"INSERT INTO  `fnitter`.`following` (`user` ,`following`) VALUES ('$newNameSmall',  'fnitter'), ('$newName', '$newNameSmall')");
+            $followAtStart = mysqli_query($db,"INSERT INTO  `jeer`.`following` (`user` ,`following`) VALUES ('$newNameSmall',  'fnitter'), ('$newName', '$newNameSmall')");
         header('Location: form.php');
         }
     }
